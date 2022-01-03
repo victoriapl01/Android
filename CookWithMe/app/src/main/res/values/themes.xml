@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/lime</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="ThemeOverlay.Search" parent="Theme.CookWithMe">
+        <!-- Primary brand color. -->
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <!-- Customize your theme here. -->
+    </style>
 </resources>

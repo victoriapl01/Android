@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Cook With Me</string>
+    <string name="title_home">All Recipes</string>
+    <string name="tortilla">Tortilla</string>
+    <string name="dish_name">Dish Name</string>
+    <string name="category_name">Category Name</string>
+
+
 </resources>
