@@ -24,9 +24,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="-20dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/tortilla" />
+            android:layout_marginTop="-20dp" />
 
     </androidx.cardview.widget.CardView>
 
