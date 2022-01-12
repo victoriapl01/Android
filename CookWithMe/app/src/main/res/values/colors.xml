@@ -23,5 +23,7 @@
     <color name="navy">#000080</color>
     <color name="green_2">#28705B</color>
     <color name="hint">#92273739</color>
+    <color name="transparent">#00273739</color>
+    <color name="lightblue">#BAAFD2E3</color>
 
 </resources>

@@ -1,5 +1,6 @@
 package android.example.cookwithme
 
+import android.content.Intent
 import android.example.cookwithme.adapter.MainCategoryAdapter
 import android.example.cookwithme.adapter.SubCategoryAdapter
 import android.example.cookwithme.database.RecipeDatabase
@@ -31,6 +32,7 @@ class HomeActivity : BaseActivity() {
         getDataFromDb()
 
         mainCategoryAdapter.setClickListener(onClicked)
+        subCategoryAdapter.setClickListener(onClickedSubItem)
 
 
 
@@ -60,7 +62,13 @@ class HomeActivity : BaseActivity() {
             getMealDataFromDb(categoryName)
         }
     }
-
+    private val onClickedSubItem = object : SubCategoryAdapter.OnItemClickListener{
+        override fun onClicked(id: Int) {
+            var intent = Intent(this@HomeActivity,DetailActivity::class.java)
+            intent.putExtra("id",id)
+            startActivity(intent)
+        }
+    }
     private fun getDataFromDb(){
         launch {
             this.let {
