@@ -52,20 +52,9 @@
                 android:layout_gravity="start"
                 android:background="@drawable/btn_bg"
                 android:id="@+id/imgToolbarBtnBack"
+                android:contentDescription="@string/description_back"
                 android:src="@drawable/ic_back"/>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/_10sdp"
-                android:paddingTop="@dimen/_10sdp"
-                android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:layout_margin="@dimen/_10sdp"
-                android:layout_gravity="end"
-                android:background="@drawable/btn_bg"
-                android:id="@+id/imgToolbarBtnFav"
-                android:src="@drawable/ic_fav_unfill"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -125,13 +114,14 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/ic_time"
                             android:src="@drawable/ic_time"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/tvTime"
-                            android:text="30 min"
+                            android:text="@string/minutes"
                             android:textSize="@dimen/_10ssp"
                             android:textColor="@color/hint"
                             android:maxEms="10"
@@ -140,6 +130,7 @@
                             android:padding="@dimen/_10sdp"
                             android:paddingTop="@dimen/_10sdp"
                             android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
                             android:paddingBottom="@dimen/_10sdp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -153,13 +144,14 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/cals"
                             android:src="@drawable/ic_time"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/cal"
-                            android:text="247 cals"
+                            android:text="@string/cals"
                             android:textSize="@dimen/_10ssp"
                             android:textColor="@color/hint"
                             android:maxEms="10"
@@ -168,6 +160,7 @@
                             android:padding="@dimen/_10sdp"
                             android:paddingTop="@dimen/_10sdp"
                             android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
                             android:paddingBottom="@dimen/_10sdp"/>
                     </LinearLayout>
 
@@ -180,13 +173,14 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/people"
                             android:src="@drawable/ic_time"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/tvServing"
-                            android:text="4 persons"
+                            android:text="@string/people"
                             android:textSize="@dimen/_10ssp"
                             android:textColor="@color/hint"
                             android:maxEms="10"
@@ -195,6 +189,7 @@
                             android:padding="@dimen/_10sdp"
                             android:paddingTop="@dimen/_10sdp"
                             android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
                             android:paddingBottom="@dimen/_10sdp"/>
                     </LinearLayout>
 
@@ -206,7 +201,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingredients"
+            android:text="@string/ingredients"
             android:textSize="@dimen/_15sdp"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"
@@ -231,13 +226,12 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/tvIngredients"
                     android:textSize="@dimen/_10ssp"
-                    android:textColor="@color/hint"
-                    android:maxEms="10"
-                    android:maxLines="2"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:padding="@dimen/_10sdp"
                     android:paddingTop="@dimen/_10sdp"
                     android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:paddingBottom="@dimen/_10sdp"/>
 
             </LinearLayout>
@@ -247,7 +241,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Instructions"
+            android:text="@string/instructions"
             android:textSize="@dimen/_15sdp"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"
@@ -273,12 +267,11 @@
                     android:id="@+id/tvInstructions"
                     android:textSize="@dimen/_10ssp"
                     android:textColor="@color/hint"
-                    android:maxEms="10"
-                    android:maxLines="2"
                     android:textStyle="bold"
                     android:padding="@dimen/_10sdp"
                     android:paddingTop="@dimen/_10sdp"
                     android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:paddingBottom="@dimen/_10sdp"/>
 
             </LinearLayout>
@@ -295,8 +288,8 @@
             android:paddingStart="@dimen/_20sdp"
             android:paddingEnd="@dimen/_20sdp"
             android:layout_margin="@dimen/_10sdp"
-            android:text="Youtube"
-            android:textColor="@color/black" />
+            android:text="@string/website"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>

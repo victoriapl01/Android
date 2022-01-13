@@ -9,9 +9,9 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "Meal")
-class Meal (
+class Meal(
     @PrimaryKey(autoGenerate = true)
-    var id:Int,
+    var id: Int,
 
     @ColumnInfo(name = "meals")
     @Expose

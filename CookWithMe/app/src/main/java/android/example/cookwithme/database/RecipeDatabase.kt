@@ -15,7 +15,7 @@ import androidx.room.TypeConverters
 @TypeConverters(CategoryListConverter::class, MealListConverter::class)
 abstract class RecipeDatabase: RoomDatabase() {
     companion object{
-        var recipesDatabase:RecipeDatabase? = null
+        private var recipesDatabase:RecipeDatabase? = null
 
         @Synchronized
         fun getDatabase(context: Context): RecipeDatabase{

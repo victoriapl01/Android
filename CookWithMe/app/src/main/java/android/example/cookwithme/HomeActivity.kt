@@ -5,10 +5,7 @@ import android.example.cookwithme.adapter.MainCategoryAdapter
 import android.example.cookwithme.adapter.SubCategoryAdapter
 import android.example.cookwithme.database.RecipeDatabase
 import android.example.cookwithme.entities.CategoryItems
-import android.example.cookwithme.entities.Meal
 import android.example.cookwithme.entities.MealsItems
-import android.example.cookwithme.entities.Recipe
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_home.*
@@ -17,12 +14,12 @@ import kotlinx.coroutines.launch
 class HomeActivity : BaseActivity() {
 
     //Initialize arraylist
-    var arrMainCategory = ArrayList<CategoryItems>()
-    var arrSubCategory = ArrayList<MealsItems>()
+    private var arrMainCategory = ArrayList<CategoryItems>()
+    private var arrSubCategory = ArrayList<MealsItems>()
 
     //Initialize adapter
-    var mainCategoryAdapter = MainCategoryAdapter()
-    var subCategoryAdapter = SubCategoryAdapter()
+    private var mainCategoryAdapter = MainCategoryAdapter()
+    private var subCategoryAdapter = SubCategoryAdapter()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,8 +60,8 @@ class HomeActivity : BaseActivity() {
         }
     }
     private val onClickedSubItem = object : SubCategoryAdapter.OnItemClickListener{
-        override fun onClicked(id: Int) {
-            var intent = Intent(this@HomeActivity,DetailActivity::class.java)
+        override fun onClicked(id: String) {
+            val intent = Intent(this@HomeActivity,DetailActivity::class.java)
             intent.putExtra("id",id)
             startActivity(intent)
         }
@@ -72,7 +69,7 @@ class HomeActivity : BaseActivity() {
     private fun getDataFromDb(){
         launch {
             this.let {
-                var cat = RecipeDatabase.getDatabase(this@HomeActivity).recipeDao().getAllCategory()
+                val cat = RecipeDatabase.getDatabase(this@HomeActivity).recipeDao().getAllCategory()
                 arrMainCategory = cat as ArrayList<CategoryItems>
                 arrMainCategory.reverse()
 
@@ -90,7 +87,7 @@ class HomeActivity : BaseActivity() {
         tvCategory.text = "${categoryName}Category"
         launch {
             this.let {
-                var cat = RecipeDatabase.getDatabase(this@HomeActivity).recipeDao().getSpecificMealList(categoryName)
+                val cat = RecipeDatabase.getDatabase(this@HomeActivity).recipeDao().getSpecificMealList(categoryName)
                 arrSubCategory = cat as ArrayList<MealsItems>
                 subCategoryAdapter.setData(arrSubCategory)
                 rv_sub_category.layoutManager = LinearLayoutManager(this@HomeActivity,LinearLayoutManager.HORIZONTAL, false)

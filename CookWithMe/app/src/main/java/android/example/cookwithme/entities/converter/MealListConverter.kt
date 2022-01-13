@@ -1,7 +1,5 @@
 package android.example.cookwithme.entities.converter
 
-import android.example.cookwithme.entities.Category
-import android.example.cookwithme.entities.CategoryItems
 import android.example.cookwithme.entities.MealsItems
 import androidx.room.TypeConverter
 import com.google.gson.Gson

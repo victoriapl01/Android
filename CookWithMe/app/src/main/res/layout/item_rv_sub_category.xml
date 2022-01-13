@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/aqua"
+    android:background="@color/transparent"
     tools:context=".SplashActivity"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_height="@dimen/_170sdp"
         app:cardBackgroundColor="@color/green_2"
         android:layout_margin="@dimen/_10sdp"
         app:cardCornerRadius="@dimen/_10sdp"

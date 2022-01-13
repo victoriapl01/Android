@@ -6,32 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import android.example.cookwithme.R
-import android.example.cookwithme.entities.Meal
 import android.example.cookwithme.entities.MealsItems
-import android.example.cookwithme.entities.Recipe
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_rv_main_category.view.*
 
 
-class SubCategoryAdapter:RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHolder>() {
+class SubCategoryAdapter : RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHolder>() {
 
-    var listener: SubCategoryAdapter.OnItemClickListener? = null
-    var ctx :Context? = null
-    var arrSubCategory = ArrayList<MealsItems>()
-    class RecipeViewHolder(view: View): RecyclerView.ViewHolder(view){
+    private var listener: OnItemClickListener? = null
+    private var ctx: Context? = null
+    private var arrSubCategory = ArrayList<MealsItems>()
 
-    }
+    class RecipeViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
-    fun setData(arrData : List<MealsItems>){
+    fun setData(arrData: List<MealsItems>) {
         arrSubCategory = arrData as ArrayList<MealsItems>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         ctx = parent.context
-        return RecipeViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_rv_sub_category,parent, false))
+        return RecipeViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_rv_sub_category, parent, false)
+        )
     }
 
-    fun setClickListener(listener1: SubCategoryAdapter.OnItemClickListener){
+    fun setClickListener(listener1: OnItemClickListener) {
         listener = listener1
     }
 
@@ -39,8 +39,8 @@ class SubCategoryAdapter:RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHolde
         holder.itemView.tv_dish_name.text = arrSubCategory[position].strMeal
         Glide.with(ctx!!).load(arrSubCategory[position].strMealThumb).into(holder.itemView.img_dish)
 
-        holder.itemView.rootView.setOnClickListener{
-            listener!!.onClicked(arrSubCategory[position].id)
+        holder.itemView.rootView.setOnClickListener {
+            listener!!.onClicked(arrSubCategory[position].idMeal)
         }
     }
 
@@ -48,7 +48,7 @@ class SubCategoryAdapter:RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHolde
         return arrSubCategory.size
     }
 
-    interface OnItemClickListener{
-        fun onClicked(id:Int)
+    interface OnItemClickListener {
+        fun onClicked(id: String)
     }
 }

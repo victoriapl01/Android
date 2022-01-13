@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">Cook With Me</string>
-    <string name="title_home">All Recipes</string>
+    <string name="app_name_up">COOK WITH ME</string>
+    <string name="start">START!</string>
+    <string name="title_home">COOK WITH ME</string>
     <string name="tortilla">Tortilla</string>
+    <string name="dish">Recipes</string>
     <string name="dish_name">Dish Name</string>
     <string name="category_name">Category Name</string>
-
+    <string name="description_back">Back Button</string>
+    <string name="ic_time">Clock</string>
+    <string name="minutes">30 min</string>
+    <string name="cals"> 218 cals</string>
+    <string name="people">4 people</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
+    <string name="website">WEB SITE</string>
 
 </resources>
